@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Weight Converter Application">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			body{background-color: #333;color: #fff;margin-top: 70px}
+		</style>
+		<title>Weight Converter</title>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<h1 class="text-center mb-3">Weight Converter</h1>
+					<form>
+						<input type="number" class="form-control form-control-lg input-weight mb-2" id="input" placeholder="Enter weight in Kilograms..." 
+						oninput="calculateWeight()">
+					</form>
+
+					<div class="card text-white bg-primary mb-2">
+						<div class="card-body">
+							<h5 class="card-title">Pounds:</h5>
+							<p class="card-text" id="pounds">0.00</p>
+						</div>
+					</div>
+
+					<div class="card text-white bg-success mb-2">
+						<div class="card-body">
+							<h5 class="card-title">Ounces:</h5>
+							<p class="card-text" id="ounces">0.00</p>
+						</div>
+					</div>
+
+					<div class="card text-white bg-danger mb-2">
+						<div class="card-body">
+							<h5 class="card-title">Grams:</h5>
+							<p class="card-text" id="grams">0.00</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<script>
+			function calculateWeight()
+			{
+				var input = document.getElementById('input').value;
+				var pounds = document.getElementById('pounds');
+				var ounces = document.getElementById('ounces');
+				var grams = document.getElementById('grams');
+
+				pounds.innerHTML = input*2.20462;
+				ounces.innerHTML = input*35.274;
+				grams.innerHTML = input*1000;
+			}
+		</script>
+	</body>
+</html>
