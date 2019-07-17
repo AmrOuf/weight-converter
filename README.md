@@ -4,5 +4,5 @@ This is a simple weight converter application that takes a weight as an input in
 
 You can try the application through this link http://bit.ly/2SivphP
 
-### To-do list
+### Further improvements
 - Make the user choose the unit of the input weight from a drop-down menu
